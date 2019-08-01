@@ -1,11 +1,11 @@
 .Content{
     width: 350px;
-    height: 200px;
+    height: 300px;
 
     display: flex;
     justify-content: center;
     align-items: center;
-
+    font-weight: 700;
     color: white;
     background-color: rgb(33, 119, 231);
     border-radius: 10px;
@@ -18,15 +18,20 @@
 }
 
 .Box{
-    width: 350px;
-    height: 200px;
+    width: 370px;
+    height: 300px;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    font-weight: 50;
     color: white;
     background-color: rgb(33, 119, 231);
     border-radius: 10px;
+    text-align: center
+}
+.Box h4{
+    font-weight: bold;
+    
 }

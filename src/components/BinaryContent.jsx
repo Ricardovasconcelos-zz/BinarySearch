@@ -11,19 +11,20 @@ function BinaryContent() {
     const [numHint, setNumHint] = useState(1)
 
     const [min, setMin] = useState(0)
-    const [max, setMax] = useState(300)
+    const [max, setMax] = useState(1000)
     const start = () => {
         setMin(0)
-        setMax(301)
+        setMax(1001)
         setNumHint(1)
-        setHint(150)
+        setHint(500)
         setState('starting')
     }
 
     if (state === 'input') {
         return (
             <div className="Box">
-                <p>Pense em um número entre {min} e {max}</p>
+                <h4>Binary Search</h4>
+                <p>Pense em um número entre {min} e {max}, e diga se a máquina acertou!</p>
                 <Button variant="success"onClick={start}>Começar a jogar!</Button>
             </div>
         )
@@ -49,7 +50,8 @@ function BinaryContent() {
     if (state === 'Finish') {
         return (
             <div className="Box">
-                <p>Acertei o número {hint} com {numHint} chutes!</p>
+                <h4>A busca foi concluída após {numHint} palpite(s)!</h4>
+                <p>Seu número era {hint}</p>
                 <Button variant="warning" onClick={start}>Iniciar Novamente! </Button>
             </div>
 
