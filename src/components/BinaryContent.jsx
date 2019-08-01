@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import './BinaryContent.css'
+import {Button} from 'react-bootstrap'
 
 function BinaryContent() {
 
@@ -16,10 +18,15 @@ function BinaryContent() {
         setNumHint(1)
         setHint(150)
         setState('starting')
-}
+    }
 
     if (state === 'input') {
-        return <button onClick={start}>Começar a jogar!</button>
+        return (
+            <div className="Box">
+                <p>Pense em um número entre {min} e {max}</p>
+                <Button variant="success"onClick={start}>Começar a jogar!</Button>
+            </div>
+        )
     }
 
     const menor = () => {
@@ -38,22 +45,26 @@ function BinaryContent() {
     const acertou = () => {
         setState('Finish')
     }
+
     if (state === 'Finish') {
         return (
-            <div>
+            <div className="Box">
                 <p>Acertei o número {hint} com {numHint} chutes!</p>
-                <button onClick={start}>Iniciar Novamente! </button>
+                <Button variant="warning" onClick={start}>Iniciar Novamente! </Button>
             </div>
 
         )
     }
 
     return (
-        <div>
+        <div className="Content">
+            <div className="Main-Box">
             <p>O seu número é o {hint}?</p>
-            <button onClick={menor}>Menor!</button>
-            <button onClick={acertou}>Acertou!</button>
-            <button onClick={maior}>Maior!</button>
+            <Button variant="danger" className="Button" onClick={menor}>Menor!</Button>
+            <Button variant="success" className="Button" onClick={acertou}>Acertou!</Button>
+            <Button variant="warning" className="Button" onClick={maior}>Maior!</Button>
+
+            </div>
         </div>
     )
 }

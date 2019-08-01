@@ -1,0 +1,32 @@
+.Content{
+    width: 350px;
+    height: 200px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    background-color: rgb(33, 119, 231);
+    border-radius: 10px;
+}
+.Main-Box{
+    text-align: center;
+}
+.Button{
+    margin-left: 10px;
+}
+
+.Box{
+    width: 350px;
+    height: 200px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    background-color: rgb(33, 119, 231);
+    border-radius: 10px;
+}
