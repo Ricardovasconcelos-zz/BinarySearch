@@ -14,7 +14,7 @@ function BinaryContent() {
     const [max, setMax] = useState(300)
     const start = () => {
         setMin(0)
-        setMax(300)
+        setMax(301)
         setNumHint(1)
         setHint(150)
         setState('starting')
